@@ -1,0 +1,33 @@
+@baseURL=http://localhost:3000/
+
+@host=http://localhost:3000
+
+### GET all pools
+GET {{baseURL}}piscines
+
+### Get a specific pool
+GET {{baseURL}}piscines/Lescar
+
+### Add a pool
+POST {{baseURL}}piscines
+Content-Type: application/json
+
+{
+    "id" : 23,
+    "nom": "Langon",
+    "adresse": "22 rue du sommeil",
+    "tel": "0745157980"
+}
+
+### Update a pool
+
+PATCH {{baseURL}}piscines/Pau
+Content-Type: application/json
+
+{
+    "id": 1
+}
+
+### Delete a pool
+
+DELETE {{baseURL}}piscines/Lescar
